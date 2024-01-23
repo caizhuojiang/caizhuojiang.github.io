@@ -1,4 +1,46 @@
 baseURL: https://caizhuojiang.github.io/
 languageCode: en-us
-title: ZJCAI'Log
+title: ZJCAI'Space
 theme: "PaperMod"
+params:
+  homeInfoParams:
+    Title: 👋 Welcome to ZJCAI'Space
+    Content: Hi, this is caizhuojiang. I'm postgraduate student at Beihang University. My research interests include human computer interaction and computer vision.
+
+  socialIcons:
+    - name: "zhihu"
+      url: "https://www.zhihu.com/people/kerwintsai"
+    - name: "github"
+      url: "https://github.com/caizhuojiang"
+    - name: "twitter"
+      url: "https://twitter.com/caizhuojiang"
+
+  env: production
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /
+      weight: 10
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 40
+    # - identifier: example
+    #   name: example.org
+    #   url: https://example.org
+    #   weight: 30
