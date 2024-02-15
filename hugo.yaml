@@ -1,11 +1,11 @@
 baseURL: https://caizhuojiang.github.io/
-languageCode: en-us
+# languageCode: en-us
 title: ZJCAI'Space
 theme: "PaperMod"
 params:
   homeInfoParams:
     Title: 👋 Welcome to ZJCAI'Space
-    Content: Hi, this is caizhuojiang. I'm postgraduate student at Beihang University. My research interests include human computer interaction and computer vision.
+    Content: Hi, this is caizhuojiang. I'm postgraduate student at Beihang University. My research interests include human-computer interaction and computer vision.
 
   socialIcons:
     - name: "zhihu"
@@ -22,25 +22,88 @@ outputs:
     - HTML
     - RSS
     - JSON
-menu:
-  main:
-    - identifier: posts
-      name: Posts
-      url: /
-      weight: 10
-    - identifier: archives
-      name: Archives
-      url: /archives/
-      weight: 20
-    - identifier: search
-      name: Search
-      url: /search/
-      weight: 30
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 40
-    # - identifier: example
-    #   name: example.org
-    #   url: https://example.org
-    #   weight: 30
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - identifier: posts
+          name: Posts
+          url: /
+          weight: 10
+        - identifier: archives
+          name: Archives
+          url: /archives/
+          weight: 20
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 30
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 40
+        # - identifier: example
+        #   name: example.org
+        #   url: https://example.org
+        #   weight: 30
+  fr:
+    languageName: ":fr:"
+    menu:
+      main:
+        - identifier: posts
+          name: Posts
+          url: /
+          weight: 10
+        - identifier: archives
+          name: Archives
+          url: /archives/
+          weight: 20
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 30
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 40
+    params:
+      homeInfoParams:
+        Title: 👋 Bienvenue sur ZJCAI'Space
+        Content: Bonjour, je suis caizhuojiang, étudiant en post-graduation à l'Université de Beihang. Mes domaines de recherche incluent l'interaction homme-machine et la vision par ordinateur.
+
+  zh:
+    languageName: ":zh:"
+    weight: 2
+    menu:
+      main:
+        - identifier: posts
+          name: Posts
+          url: /
+          weight: 10
+        - identifier: archives
+          name: Archives
+          url: /archives/
+          weight: 20
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 30
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 40
+    params:
+      homeInfoParams:
+        Title: 👋 欢迎来到 ZJCAI'Space
+        # Content: Bonjour, je suis caizhuojiang, étudiant en post-graduation à l'Université de Beihang. Mes domaines de recherche incluent l'interaction homme-machine et la vision par ordinateur.
+
+
+
+
