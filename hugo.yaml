@@ -2,9 +2,24 @@ baseURL: https://caizhuojiang.github.io/
 # languageCode: en-us
 title: ZJCAI'Space
 theme: "PaperMod"
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+
+googleAnalytics: G-N1WX2HG3BB
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
 params:
   homeInfoParams:
-    Title: 👋 Welcome to ZJCAI'Space
+    Title: 🌲 Welcome to ZJCAI'Space
     Content: Hi, this is caizhuojiang. I'm postgraduate student at Beihang University. My research interests include human-computer interaction and computer vision.
 
   socialIcons:
@@ -16,6 +31,30 @@ params:
       url: "https://twitter.com/caizhuojiang"
 
   env: production
+
+  # ShowReadingTime: true
+  # ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+  #   # disableHLJS: true # to disable highlight.js
+  #   # disableFingerprinting: true
+    favicon: "favicon_tree.ico"
+  #   favicon16x16: "/favicon-16x16.png"
+  #   favicon32x32: "/favicon-32x32.png"
+  #   apple_touch_icon: "/apple-touch-icon.png"
 
 outputs:
   home:
@@ -75,7 +114,7 @@ languages:
           weight: 40
     params:
       homeInfoParams:
-        Title: 👋 Bienvenue sur ZJCAI'Space
+        Title: 🌲 Bienvenue sur ZJCAI'Space
         Content: Bonjour, je suis caizhuojiang, étudiant en post-graduation à l'Université de Beihang. Mes domaines de recherche incluent l'interaction homme-machine et la vision par ordinateur.
 
   zh:
@@ -101,7 +140,7 @@ languages:
           weight: 40
     params:
       homeInfoParams:
-        Title: 👋 欢迎来到 ZJCAI'Space
+        Title: 🌲 欢迎来到 ZJCAI'Space
         # Content: Bonjour, je suis caizhuojiang, étudiant en post-graduation à l'Université de Beihang. Mes domaines de recherche incluent l'interaction homme-machine et la vision par ordinateur.
 
 
