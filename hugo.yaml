@@ -1,6 +1,6 @@
 baseURL: https://caizhuojiang.github.io/
 # languageCode: en-us
-title: ZJCAI'Space
+title: Zhuojiang Cai
 theme: "PaperMod"
 
 enableInlineShortcodes: true
@@ -17,18 +17,34 @@ minify:
   disableXML: true
   minifyOutput: true
 
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: cv
+      name: CV
+      url: https://caizhuojiang.github.io/
+      weight: 20
+
 params:
+  social: true
   homeInfoParams:
-    Title: 🌲 Welcome to ZJCAI'Space
-    Content: Hi, this is caizhuojiang. I'm postgraduate student at Beihang University. My research interests include human-computer interaction and computer vision.
+    Title: 🌲 👋 Hi!
+    Content: >
+      I am currently a Master's student at Beihang University, advised by [Prof. Feng Lu](https://phi-ai.buaa.edu.cn). As an HCI researcher, my work focuses on eye-tracking, smart glasses, and natural interaction. 
+      I previously received my Bachelor's degree from the [Sino-French Engineer School at Beihang](https://ecpknen.buaa.edu.cn/), interned at [Segway-Ninebot](https://us-en.segway.com/), [Momenta](https://www.momenta.cn/en/), and [NIO](https://www.nio.cn/), and worked as a research assistant at Tsinghua University.
 
   socialIcons:
-    - name: "zhihu"
-      url: "https://www.zhihu.com/people/kerwintsai"
     - name: "github"
       url: "https://github.com/caizhuojiang"
-    - name: "twitter"
-      url: "https://twitter.com/caizhuojiang"
+    - name: "x"
+      url: "https://x.com/caizhuojiang"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/zhuojiang-cai-6a08112b1/"
+    - name: "email"
+      url: "mailto:caizhuojiang@buaa.edu.cn"
 
   env: production
 
@@ -37,7 +53,7 @@ params:
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
-  ShowWordCount: true
+  ShowWordCount: false
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
   disableSpecial1stPost: false
@@ -64,85 +80,16 @@ outputs:
 
 languages:
   en:
-    languageName: "English"
+    languageName: "en"
     weight: 1
-    taxonomies:
-      category: categories
-      tag: tags
-      series: series
-    menu:
-      main:
-        - identifier: posts
-          name: Posts
-          url: /
-          weight: 10
-        - identifier: archives
-          name: Archives
-          url: /archives/
-          weight: 20
-        - identifier: search
-          name: Search
-          url: /search/
-          weight: 30
-        - identifier: tags
-          name: Tags
-          url: /tags/
-          weight: 40
-        # - identifier: example
-        #   name: example.org
-        #   url: https://example.org
-        #   weight: 30
-  fr:
-    languageName: ":fr:"
-    menu:
-      main:
-        - identifier: posts
-          name: Posts
-          url: /
-          weight: 10
-        - identifier: archives
-          name: Archives
-          url: /archives/
-          weight: 20
-        - identifier: search
-          name: Search
-          url: /search/
-          weight: 30
-        - identifier: tags
-          name: Tags
-          url: /tags/
-          weight: 40
-    params:
-      homeInfoParams:
-        Title: 🌲 Bienvenue sur ZJCAI'Space
-        Content: Bonjour, je suis caizhuojiang, étudiant en post-graduation à l'Université de Beihang. Mes domaines de recherche incluent l'interaction homme-machine et la vision par ordinateur.
 
-  zh:
-    languageName: ":zh:"
+  jiang:
+    languageName: "Jiang"
     weight: 2
-    menu:
-      main:
-        - identifier: posts
-          name: Posts
-          url: /
-          weight: 10
-        - identifier: archives
-          name: Archives
-          url: /archives/
-          weight: 20
-        - identifier: search
-          name: Search
-          url: /search/
-          weight: 30
-        - identifier: tags
-          name: Tags
-          url: /tags/
-          weight: 40
     params:
-      homeInfoParams:
-        Title: 🌲 欢迎来到 ZJCAI'Space
-        # Content: Bonjour, je suis caizhuojiang, étudiant en post-graduation à l'Université de Beihang. Mes domaines de recherche incluent l'interaction homme-machine et la vision par ordinateur.
-
-
-
-
+      profileMode:
+        enabled: true
+        subtitle: "蔡卓江 | Beihang University"
+        imageUrl: "profile.jpg"
+        imageWidth: 120
+        imageHeight: 120
