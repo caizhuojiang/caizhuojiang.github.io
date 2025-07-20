@@ -1,0 +1,166 @@
+/* Custom styles for publications section */
+.publications-section {
+    margin-top: 0 !important;
+}
+
+/* Remove margin from home-info if it exists */
+.first-entry.home-info {
+    margin-bottom: 0 !important;
+}
+
+/* Profile mode styles */
+.profile {
+    padding: 120px 0 60px;
+    text-align: center;
+}
+
+.profile_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile_inner img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile_inner h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.profile_inner span {
+    font-size: 1.1rem;
+    color: var(--secondary);
+}
+
+/* Increase page content width */
+.main {
+    max-width: 850px !important;
+}
+
+.post-content {
+    max-width: 850px !important;
+}
+
+.first-entry.home-info {
+    max-width: 850px !important;
+}
+
+.section-header h2 {
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    padding-bottom: 0.5rem;
+}
+
+.publication-entry {
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    background: var(--entry);
+    position: relative;
+    cursor: pointer;
+}
+
+/* Invisible link covering the entire entry */
+.publication-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-decoration: none;
+}
+
+/* Make sure text links are above the invisible link */
+.publication-header h3 a {
+    position: relative;
+    z-index: 2;
+}
+
+.publication-image {
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.publication-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.publication-entry:hover .publication-image img {
+    transform: scale(1.005);
+}
+
+.publication-entry:hover {
+    border-color: var(--primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.publication-header h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+
+.publication-header h3 a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.publication-header h3 a:hover {
+    text-decoration: underline;
+}
+
+.publication-authors {
+    color: var(--secondary);
+    font-size: 0.9em;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.publication-venue {
+    font-style: italic;
+    font-size: 0.9em;
+    color: var(--content);
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .publication-entry {
+    background: var(--entry);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .publication-entry:hover {
+    border-color: var(--primary);
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .publication-entry {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .publication-header h3 {
+        font-size: 1em;
+    }
+    
+    .publication-authors,
+    .publication-venue {
+        font-size: 0.85em;
+    }
+}

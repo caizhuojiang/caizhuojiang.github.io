@@ -1,0 +1,107 @@
+{{- define "main" }}
+
+{{- if .Site.Params.profileMode.enabled }}
+<!-- Profile Mode Layout -->
+<div class="profile">
+    {{- if .Site.Params.profileMode.imageUrl -}}
+    <div class="profile_inner">
+        <img draggable="false" src="{{ .Site.Params.profileMode.imageUrl | absURL }}" alt="{{ .Site.Params.profileMode.imageTitle | default "profile image" }}" height="{{ .Site.Params.profileMode.imageHeight | default 120 }}" width="{{ .Site.Params.profileMode.imageWidth | default 120 }}" />
+        <h1>{{ .Site.Title | markdownify }}</h1>
+        <span>{{ .Site.Params.profileMode.subtitle | markdownify }}</span>
+        <div class="social-icons">
+            {{- range .Site.Params.socialIcons }}
+            <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
+                title="{{ (.title | default .name) | title }}">
+                {{ partial "svg.html" . }}
+            </a>
+            {{- end }}
+        </div>
+    </div>
+    {{- end }}
+</div>
+{{- else if .Site.Params.homeInfoParams }}
+<!-- Home Info Layout -->
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>{{ .Site.Params.homeInfoParams.Title | markdownify }}</h1>
+    </header>
+    <div class="entry-content">
+        {{ .Site.Params.homeInfoParams.Content | markdownify }}
+    </div>
+    <footer class="entry-footer">
+        <div class="social-icons">
+            {{- range .Site.Params.socialIcons }}
+            <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
+                title="{{ (.title | default .name) | title }}">
+                {{ partial "svg.html" . }}
+            </a>
+            {{- end }}
+        </div>
+    </footer>
+</article>
+
+<!-- Custom Publications Section -->
+<section class="publications-section" style="margin-top: -1rem;">
+    <header class="section-header">
+        <h2 style="font-size: 1.5em; margin-bottom: 1rem; color: var(--primary);">📝 Publications</h2>
+    </header>
+    
+    <div class="publications-list">
+        <article class="publication-entry" style="margin-bottom: 1.5rem; padding: 1rem; border: 1px solid var(--border); border-radius: 8px; position: relative;">
+            <a href="https://dl.acm.org/doi/10.1145/3706598.3713739" target="_blank" class="publication-link"></a>
+            <div class="publication-image">
+                <img src="/images/gazeswipe.jpg" alt="GazeSwipe" loading="lazy">
+            </div>
+            <header class="publication-header">
+                <h3 style="margin: 0 0 0.5rem 0;">
+                    GazeSwipe: Enhancing Mobile Touchscreen Reachability through Seamless Gaze and Finger-Swipe Integration
+                </h3>
+                <div class="publication-authors" style="color: var(--secondary); font-size: 0.9em; margin-bottom: 0.5rem;">
+                    Zhuojiang Cai, Jingkai Hong, Zhimin Wang, Feng Lu
+                </div>
+                <div class="publication-venue" style="font-style: italic; font-size: 0.9em;">
+                    CHI '25: Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems
+                </div>
+            </header>
+        </article>
+
+        <article class="publication-entry" style="margin-bottom: 1.5rem; padding: 1rem; border: 1px solid var(--border); border-radius: 8px; position: relative;">
+            <a href="https://link.springer.com/article/10.1007/s42486-024-00168-7" target="_blank" class="publication-link"></a>
+            <div class="publication-image">
+                <img src="/images/gam360.jpg" alt="Gam360" loading="lazy">
+            </div>
+            <header class="publication-header">
+                <h3 style="margin: 0 0 0.5rem 0;">
+                    Gam360: sensing gaze activities of multi-persons in 360 degrees
+                </h3>
+                <div class="publication-authors" style="color: var(--secondary); font-size: 0.9em; margin-bottom: 0.5rem;">
+                    Zhuojiang Cai, Haofei Wang, Yuhao Niu, Feng Lu
+                </div>
+                <div class="publication-venue" style="font-style: italic; font-size: 0.9em;">
+                    CCF Transactions on Pervasive Computing and Interaction, 2025
+                </div>
+            </header>
+        </article>
+
+        <article class="publication-entry" style="margin-bottom: 1.5rem; padding: 1rem; border: 1px solid var(--border); border-radius: 8px; position: relative;">
+            <a href="https://ieeexplore.ieee.org/document/10458314" target="_blank" class="publication-link"></a>
+            <div class="publication-image">
+                <img src="/images/vekws.jpg" alt="VEKWS" loading="lazy">
+            </div>
+            <header class="publication-header">
+                <h3 style="margin: 0 0 0.5rem 0;">
+                    Robust dual-modal speech keyword spotting for XR headsets
+                </h3>
+                <div class="publication-authors" style="color: var(--secondary); font-size: 0.9em; margin-bottom: 0.5rem;">
+                    Zhuojiang Cai, Yuhan Ma, Feng Lu
+                </div>
+                <div class="publication-venue" style="font-style: italic; font-size: 0.9em;">
+                    IEEE Transactions on Visualization and Computer Graphics, 2024 (IEEE VR 2024)
+                </div>
+            </header>
+        </article>
+    </div>
+</section>
+{{- end }}
+
+{{- end }}{{/* end main */}}
