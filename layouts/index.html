@@ -40,10 +40,45 @@
     </footer>
 </article>
 
-<!-- Custom Publications Section -->
-<section class="publications-section" style="margin-top: -1rem;">
+<!-- Custom News Section -->
+<section class="news-section">
     <header class="section-header">
-        <h2 style="font-size: 1.5em; margin-bottom: 1rem; color: var(--primary);">📝 Publications</h2>
+        <h2>News</h2>
+    </header>
+    
+    <!-- Pinned collaboration message -->
+    <div class="news-item news-pinned">
+        <span class="news-date">📌</span>
+        <span class="news-content">I am always excited to connect and collaborate with passionate researchers working in similar directions. Feel free to reach out if you're interested in discussing potential collaborations!</span>
+    </div>
+    
+    <div class="news-list">
+        <div class="news-item">
+            <span class="news-date">2025.08</span>
+            <span class="news-content">Our paper "LSS3D: Learnable Spatial Shifting for Consistent and High-Quality 3D Generation from Single-Image" has been accepted by MMSP 2025!</span>
+        </div>
+        
+        <div class="news-item">
+            <span class="news-date">2025.01</span>
+            <span class="news-content">Our paper "GazeSwipe: Enhancing Mobile Touchscreen Reachability through Seamless Gaze and Finger-Swipe Integration" has been accepted by CHI 2025!</span>
+        </div>
+        
+        <div class="news-item">
+            <span class="news-date">2024.12</span>
+            <span class="news-content">Our paper "Gam360: sensing gaze activities of multi-persons in 360 degrees" has been accepted by CCF Transactions on Pervasive Computing and Interaction!</span>
+        </div>
+        
+        <div class="news-item">
+            <span class="news-date">2024.01</span>
+            <span class="news-content">Our paper "Robust dual-modal speech keyword spotting for XR headsets" has been accepted by IEEE VR 2024!</span>
+        </div>
+    </div>
+</section>
+
+<!-- Custom Publications Section -->
+<section class="publications-section">
+    <header class="section-header">
+        <h2>Publications</h2>
     </header>
     
     <div class="publications-list">
@@ -55,12 +90,32 @@
             <header class="publication-header">
                 <h3 style="margin: 0 0 0.5rem 0;">
                     GazeSwipe: Enhancing Mobile Touchscreen Reachability through Seamless Gaze and Finger-Swipe Integration
+                    <span class="publication-award award-best">🏆 Best Paper Award</span>
                 </h3>
                 <div class="publication-authors" style="color: var(--secondary); font-size: 0.9em; margin-bottom: 0.5rem;">
                     Zhuojiang Cai, Jingkai Hong, Zhimin Wang, Feng Lu
                 </div>
                 <div class="publication-venue" style="font-style: italic; font-size: 0.9em;">
                     CHI '25: Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems
+                </div>
+            </header>
+        </article>
+
+        <article class="publication-entry" style="margin-bottom: 1.5rem; padding: 1rem; border: 1px solid var(--border); border-radius: 8px; position: relative;">
+            <a href="https://ieeexplore.ieee.org/document/10458314" target="_blank" class="publication-link"></a>
+            <div class="publication-image">
+                <img src="/images/vekws.jpg" alt="VEKWS" loading="lazy">
+            </div>
+            <header class="publication-header">
+                <h3 style="margin: 0 0 0.5rem 0;">
+                    Robust dual-modal speech keyword spotting for XR headsets
+                    <span class="publication-award award-nomination">🥈 Honorable Mention for Best Paper</span>
+                </h3>
+                <div class="publication-authors" style="color: var(--secondary); font-size: 0.9em; margin-bottom: 0.5rem;">
+                    Zhuojiang Cai, Yuhan Ma, Feng Lu
+                </div>
+                <div class="publication-venue" style="font-style: italic; font-size: 0.9em;">
+                    IEEE Transactions on Visualization and Computer Graphics, 2024 (IEEE VR 2024)
                 </div>
             </header>
         </article>
@@ -84,22 +139,22 @@
         </article>
 
         <article class="publication-entry" style="margin-bottom: 1.5rem; padding: 1rem; border: 1px solid var(--border); border-radius: 8px; position: relative;">
-            <a href="https://ieeexplore.ieee.org/document/10458314" target="_blank" class="publication-link"></a>
             <div class="publication-image">
-                <img src="/images/vekws.jpg" alt="VEKWS" loading="lazy">
+                <img src="/images/lss3d.jpg" alt="LSS3D" loading="lazy">
             </div>
             <header class="publication-header">
                 <h3 style="margin: 0 0 0.5rem 0;">
-                    Robust dual-modal speech keyword spotting for XR headsets
+                    LSS3D: Learnable Spatial Shifting for Consistent  and High-Quality 3D Generation from Single-Image
                 </h3>
                 <div class="publication-authors" style="color: var(--secondary); font-size: 0.9em; margin-bottom: 0.5rem;">
-                    Zhuojiang Cai, Yuhan Ma, Feng Lu
+                    Zhuojiang Cai, Yiheng Zhang, Meitong Guo, Mingdao Wang, Yuwang Wang
                 </div>
                 <div class="publication-venue" style="font-style: italic; font-size: 0.9em;">
-                    IEEE Transactions on Visualization and Computer Graphics, 2024 (IEEE VR 2024)
+                    IEEE 27th International Workshop on Multimedia Signal Processing (MMSP 2025)
                 </div>
             </header>
         </article>
+
     </div>
 </section>
 {{- end }}

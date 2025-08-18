@@ -1,11 +1,121 @@
+/* Force light theme and white background for sections above publications */
+body {
+    background: white !important;
+}
+
+/* Disable dark mode completely */
+[data-theme="dark"],
+.dark {
+    background: white !important;
+    color: #333 !important;
+}
+
+/* Ensure all sections above publications have white background */
+.profile,
+.first-entry.home-info,
+header,
+nav {
+    background: white !important;
+    color: #333 !important;
+}
+
+/* Override theme variables to light theme values */
+:root {
+    --theme: white;
+    --entry: #f8f9fa;
+    --primary: #1e90ff;
+    --secondary: #666;
+    --tertiary: #f0f0f0;
+    --content: #333;
+    --hljs-bg: #f8f8f8;
+    --code-bg: #f5f5f5;
+    --border: #e0e0e0;
+}
+
 /* Custom styles for publications section */
 .publications-section {
-    margin-top: 0 !important;
+    margin-top: 2rem !important;
+}
+
+/* Custom styles for news section */
+.news-section {
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.news-list {
+    background: #f8f9fa;
+    border-left: 4px solid #ddd;
+    padding: 1.2rem;
+    margin: 0;
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+}
+
+.news-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 0.6rem;
+    color: #666;
+    font-size: 0.85em;
+    line-height: 1.4;
+}
+
+.news-item:last-child {
+    margin-bottom: 0;
+}
+
+.news-date {
+    font-weight: 600;
+    color: #888;
+    font-size: 0.85em;
+    white-space: nowrap;
+    min-width: 60px;
+    font-style: normal;
+}
+
+.news-content {
+    color: #666;
+    font-size: 0.85em;
+    line-height: 1.4;
+}
+
+/* Pinned news item styling */
+.news-item.news-pinned {
+    background: #f0f8ff;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #e0e8f0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.news-item.news-pinned .news-date {
+    color: #1e90ff;
+    font-size: 0.9em;
+    font-weight: 600;
+    white-space: nowrap;
+    min-width: 60px;
+    font-style: normal;
+}
+
+.news-item.news-pinned .news-content {
+    color: #333;
+    font-weight: 500;
+    font-size: 0.85em;
+    line-height: 1.4;
+    font-style: normal;
 }
 
 /* Remove margin from home-info if it exists */
 .first-entry.home-info {
-    margin-bottom: 0 !important;
+    margin-bottom: 1rem !important;
+    margin-top: 0.5rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
 }
 
 /* Profile mode styles */
@@ -52,19 +162,67 @@
 .section-header h2 {
     font-size: 1.5em;
     margin-bottom: 1rem;
-    color: var(--primary);
+    color: #333;
     padding-bottom: 0.5rem;
+}
+
+/* Ensure consistent section spacing */
+.news-section .section-header,
+.publications-section .section-header {
+    margin-bottom: 1.5rem;
 }
 
 .publication-entry {
     margin-bottom: 1.5rem;
     padding: 1.2rem;
-    border: 1px solid var(--border);
+    border: 1px solid #e0e0e0 !important;
     border-radius: 8px;
     transition: all 0.2s ease;
-    background: var(--entry);
+    background: #f8f9fa !important;
     position: relative;
     cursor: pointer;
+}
+
+/* Ensure all child elements also have proper background */
+.publication-entry .publication-header,
+.publication-entry .publication-authors,
+.publication-entry .publication-venue {
+    background: transparent !important;
+}
+
+/* Publication award badges */
+.publication-award {
+    display: inline-block !important;
+    margin-left: -0.1rem !important;
+    font-size: 0.6rem !important;
+    border-radius: 12px !important;
+    padding: 0.2rem 0.5rem !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+    transform: rotate(0deg) !important;
+    transition: transform 0.2s ease !important;
+    vertical-align: middle !important;
+}
+
+.publication-award:hover {
+    transform: rotate(-5deg) scale(1.05) !important;
+}
+
+.publication-entry .publication-award.award-best {
+    background: linear-gradient(135deg, #fff9e6 0%, #ffe6b3 50%, #ffd966 100%) !important;
+    border: 1px solid #e6cc80 !important;
+    color: #996633 !important;
+    text-shadow: none !important;
+}
+
+.publication-entry .publication-award.award-nomination {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #d6d6d6 100%) !important;
+    border: 1px solid #bbb !important;
+    color: #666 !important;
+    text-shadow: none !important;
 }
 
 /* Invisible link covering the entire entry */
@@ -103,7 +261,7 @@
 }
 
 .publication-entry:hover {
-    border-color: var(--primary);
+    border-color: #1e90ff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
 }
@@ -115,7 +273,7 @@
 }
 
 .publication-header h3 a {
-    color: var(--primary);
+    color: #1e90ff;
     text-decoration: none;
     font-weight: 600;
 }
@@ -125,7 +283,7 @@
 }
 
 .publication-authors {
-    color: var(--secondary);
+    color: #666;
     font-size: 0.9em;
     margin-bottom: 0.5rem;
     font-weight: 500;
@@ -134,10 +292,11 @@
 .publication-venue {
     font-style: italic;
     font-size: 0.9em;
-    color: var(--content);
+    color: #333;
 }
 
-/* Dark theme adjustments */
+/* Dark theme adjustments - DISABLED */
+/* 
 [data-theme="dark"] .publication-entry {
     background: var(--entry);
     border-color: var(--border);
@@ -147,6 +306,7 @@
     border-color: var(--primary);
     box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
 }
+*/
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
@@ -163,4 +323,128 @@
     .publication-venue {
         font-size: 0.85em;
     }
+    
+    .news-item {
+        flex-direction: column;
+        gap: 0.3rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.8em;
+    }
+    
+    .news-date {
+        min-width: auto;
+        font-size: 0.8em;
+    }
+    
+    .news-content {
+        font-size: 0.8em;
+    }
+    
+    /* Pinned news mobile styling */
+    .news-item.news-pinned {
+        margin-bottom: 1rem;
+        padding: 0.8rem;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    .news-item.news-pinned .news-date {
+        min-width: auto;
+        font-size: 0.85em;
+    }
+    
+    .news-item.news-pinned .news-content {
+        font-size: 0.8em;
+    }    
+    
+    /* Adjust section spacing for mobile */
+    .news-section {
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .publications-section {
+        margin-top: 1.5rem !important;
+    }
+    
+    .first-entry.home-info {
+        margin-bottom: 0.8rem !important;
+        margin-top: 0.3rem !important;
+        padding-top: 0.8rem !important;
+        padding-bottom: 0.8rem !important;
+    }
+    
+    /* Adjust profile padding for mobile */
+    .profile {
+        padding: 80px 0 40px;
+    }
+}
+
+/* Additional styles to completely disable dark mode */
+/* Override any dark theme classes that might be applied */
+.dark,
+[data-theme="dark"],
+body.dark {
+    --theme: white !important;
+    --entry: #f8f9fa !important;
+    --primary: #1e90ff !important;
+    --secondary: #666 !important;
+    --tertiary: #f0f0f0 !important;
+    --content: #333 !important;
+    --hljs-bg: #f8f8f8 !important;
+    --code-bg: #f5f5f5 !important;
+    --border: #e0e0e0 !important;
+    background: white !important;
+    color: #333 !important;
+}
+
+/* Ensure all text elements use dark text on white background */
+h1, h2, h3, h4, h5, h6, p, span, a, div {
+    color: inherit;
+}
+
+/* Ensure navigation and header elements are white */
+.top-link,
+#menu,
+.breadcrumbs,
+.post-meta {
+    background: white !important;
+    color: #333 !important;
+}
+
+/* Hide theme toggle button if it exists */
+#theme-toggle {
+    display: none !important;
+}
+
+/* Force white background for all containers above publications */
+.main,
+.post-header,
+.post-content,
+article:not(.publication-entry) {
+    background: white !important;
+    color: #333 !important;
+}
+
+/* Ensure publications section has correct styling */
+.publications-section {
+    background: white !important;
+}
+
+.publications-section .publication-entry * {
+    background: transparent !important;
+}
+
+/* Entry content styling */
+.entry-content {
+    color: #000 !important;
+}
+
+.entry-content a {
+    color: #666 !important;
+    text-decoration: underline !important;
+}
+
+.entry-content a:hover {
+    color: #333 !important;
 }

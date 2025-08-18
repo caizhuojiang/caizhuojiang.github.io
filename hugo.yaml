@@ -25,17 +25,17 @@ menu:
       weight: 10
     - identifier: cv
       name: CV
-      url: https://caizhuojiang.github.io/
+      url: https://drive.google.com/file/d/1N3UHzB23b218CQ8Ew23Dq9B-mgW5JTJ8/view?usp=sharing
       weight: 20
 
 params:
   social: true
   homeInfoParams:
-    Title: 🌲 👋 Hi!
+    Title: 👋 Hi!
     Content: >
-      I am currently a PhD student at [Technical University of Munich](https://www.tum.de/en/), advised by [Prof. Enkelejda Kasneci](https://www.edu.sot.tum.de/en/hctl/prof-dr-enkelejda-kasneci/). As an HCI researcher, my work focuses on egocentric vision, smart glasses, and natural interaction.  
-      I previously received my Master's degree at [Beihang University](https://buaa.edu.cn/) under the supervision of [Prof. Feng Lu](https://phi-ai.buaa.edu.cn) at the Phi-AI Lab. 
-      I interned at [Segway-Ninebot](https://us-en.segway.com/), [Momenta](https://www.momenta.cn/en/), and [NIO](https://www.nio.cn/), and worked as a research assistant at Tsinghua University.
+      I am currently a PhD student at [Technical University of Munich](https://www.tum.de/en/), advised by [Prof. Enkelejda Kasneci](https://www.edu.sot.tum.de/en/hctl/prof-dr-enkelejda-kasneci/). As a researcher in CV and HCI, my work focuses on egocentric 3D vision, smart glasses, and natural interaction.  
+      I received my Master’s degree from [Beihang University](https://buaa.edu.cn/) where I worked under the supervision of [Prof. Feng Lu](https://phi-ai.buaa.edu.cn) at the Phi-AI Lab. 
+      I have also gained industry and research experience through internships at [Segway-Ninebot](https://us-en.segway.com/), [Momenta](https://www.momenta.cn/en/), and [NIO](https://www.nio.cn/), as well as working as a research assistant at Tsinghua University under the guidance of [Dr. Yuwang Wang](https://scholar.google.com/citations?hl=en&user=KhFGpFIAAAAJ).
 
   socialIcons:
     - name: "github"
